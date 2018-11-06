@@ -1,0 +1,8 @@
+- type: parallel
+  name: build-lergo
+  services:
+  - lergo-build
+  steps:
+  - command: bash -c /app/lergo/lergo-build/scripts/build_ri.sh
+  - command: bash -c /app/lergo/lergo-build/scripts/build_ui.sh
+  - command: bash -c /app/lergo/lergo-build/scripts/build_system_tests.sh
