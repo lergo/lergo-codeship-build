@@ -1,5 +1,7 @@
 lergo-build:
+  cached: true
   # cached: false # commenting out for development. should not be commented when live
   build:
     image: lergo-build
     dockerfile: Dockerfile
+  encrypted_env_file: env.encrypted
