@@ -4,8 +4,6 @@
   - lergo-build
   steps:
     # this failed at the time of writing this... need to fix and uncomment
-    # - command: bash -c /app/lergo/lergo-build/scripts/build_ri.sh
-    # - command: bash -c /app/lergo/lergo-build/scripts/test_ri.sh
+    - command: bash -c /app/lergo/lergo-build/scripts/test_ri.sh
     - command: bash -c /app/lergo/lergo-build/scripts/upload_artifacts.sh
-    # - command: bash -c /app/lergo/lergo-build/scripts/test_ri.sh
-  # - command: bash -c /app/lergo/lergo-build/scripts/build_system_tests.sh
+    # - command: bash -c /app/lergo/lergo-build/scripts/run_system_tests.sh # this currently fails.. not sure why.
