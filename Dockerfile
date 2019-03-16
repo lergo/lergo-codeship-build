@@ -13,14 +13,14 @@ RUN /bin/bash -c ${workdir}/lergo-build/scripts/install_ri.sh
 COPY scripts/build_ri.sh ${workdir}/lergo-build/scripts/build_ri.sh
 RUN /bin/bash -c ${workdir}/lergo-build/scripts/build_ri.sh
 
-COPY scripts/install_ui.sh ${workdir}/lergo-build/scripts/install_ui.sh
-RUN /bin/bash -c ${workdir}/lergo-build/scripts/install_ui.sh
+# COPY scripts/install_ui.sh ${workdir}/lergo-build/scripts/install_ui.sh
+# RUN /bin/bash -c ${workdir}/lergo-build/scripts/install_ui.sh
 
-COPY scripts/build_ui.sh ${workdir}/lergo-build/scripts/build_ui.sh
-RUN /bin/bash -c ${workdir}/lergo-build/scripts/build_ui.sh
+# COPY scripts/build_ui.sh ${workdir}/lergo-build/scripts/build_ui.sh
+# RUN /bin/bash -c ${workdir}/lergo-build/scripts/build_ui.sh
 
-COPY scripts/build_system_tests.sh ${workdir}/lergo-build/scripts/build_system_tests.sh
-RUN /bin/bash -c ${workdir}/lergo-build/scripts/build_system_tests.sh
+# COPY scripts/build_system_tests.sh ${workdir}/lergo-build/scripts/build_system_tests.sh
+# RUN /bin/bash -c ${workdir}/lergo-build/scripts/build_system_tests.sh
 
 COPY scripts/install_tasks.sh ${workdir}/lergo-build/scripts/install_tasks.sh
 RUN /bin/bash -c ${workdir}/lergo-build/scripts/install_tasks.sh
