@@ -21,10 +21,20 @@ export JOB_NAME=${CI_JOB_NAME:-local-job-name};
 \cp -f build.id $ARTIFACTS_HOME
 \cp -f lergo-ri/build/install.sh $ARTIFACTS_HOME
 
+echo pwd
 
 pushd lergo-ri/build/vagrant/synced_folder/tasks
 ls -ll $ARTIFACTS_HOME
-echo $AWS_ACCESS_KEY_ID
+echo
+echo 'CI_BUILD_ID' $CI_BUILD_ID
+
+echo
+echo 'AWS_ACCESS_KEY_ID' $AWS_ACCESS_KEY_ID
+echo
+
+sed -i 's/lergo-backups/lergopro-backups/g' Gruntfile.js
+sed -i 's/process.env.JOB_NAME/"build-lergopro"/g' Gruntfile.js
+
   grunt s3:uploadArtifacts
-  grunt s3:uploadArtifactsLatest
+#  grunt s3:uploadArtifactsLatest
 popd

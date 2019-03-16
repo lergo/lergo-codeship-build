@@ -18,6 +18,8 @@ cd lergo-ri
 git log  --abbrev=30 --pretty=format:"%h|%an|%ar|%s" -10 >> ../lergo-ui/$COMMITS_TEMPLATE
 cd ..
 cd lergo-ui
+echo '****************************************************************************************the build number is ' $CI_BUILD_ID
+echo 'CI string time' $CI_STRING_TIME
 echo "Build Number : $BUILD_NUMBER <br/> Build ID : $BUILD_ID <br/> Build Name : $BUILD_DISPLAY_NAME <br/> Job Name : $JOB_NAME <br/> Build Tag : $BUILD_TAG <br/>" > $VERSION_TEMPLATE
 
 
