@@ -16,7 +16,7 @@ hash='#';
 
 
 export BUILD_NUMBER=${CI_BUILD_ID:-local-build-id};
-export BUILD_ID=${CI_BUILD_ID:-local-build-id};
+export BUILD_ID=${CI_STRING_TIME:-local-build-id};
 export BUILD_DISPLAY_NAME=$hash${CI_BUILD_ID:-local-build-id};
 #export JOB_NAME=${CI_JOB_NAME:-local-job-name};
 export BUILD_TAG=CI Build;
